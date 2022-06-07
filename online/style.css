@@ -1,0 +1,108 @@
+:root {
+    --color-: #2698ac;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: var(--color-);
+    color: #fff;
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    max-height: 100%;
+    max-width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px 24px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.form__p{
+    padding-top: 16px;
+    color: gainsboro;
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.form__img {
+	background: url("/images/spiders.png") center no-repeat;
+	background-size: contain;
+    height: 64px;
+	width: 64px;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form__input-container {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.form__input,
+.form__button {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.25)
+    );
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 24px;
+    outline: transparent;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.form__input {
+    padding: 12px 24px;
+    width: 100%;
+}
+
+.form__input:hover + .form__input-label {
+    left: 30px;
+    opacity: 0.1;
+}
+
+.form__input:focus + .form__input-label,
+.form__input:not(:placeholder-shown) + .form__input-label {
+    left: 100%;
+    opacity: 0;
+}
+
+.form__input-label {
+    cursor: text;
+    left: 24px;
+    font-style: italic;
+    opacity: 0.4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.2s ease-in, opacity 0.2s ease-in;
+}
+
+.form__button {
+    cursor: pointer;
+    padding: 12px 48px;
+}
